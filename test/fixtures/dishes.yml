@@ -1,11 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  price: 9.99
-  name: MyString
-  description: MyString
+  price: 12.99
+  name: "Octopus"
+  description: "It's slimy and tasty"
+  course_id: 1
 
 two:
-  price: 9.99
-  name: MyString
-  description: MyString
+  price: 29.99
+  name: "Ribeye"
+  description: "It's meaty and tasty"
+  course_id: 2
+
+three:
+  price: 9.00
+  name: "Creme Brulee"
+  description: "It's sweet and tasty"
+  course_id: 3

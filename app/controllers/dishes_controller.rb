@@ -8,6 +8,7 @@ class DishesController < ApplicationController
 
   # GET /dishes/1
   def show
+    redirect_to edit_dish_path(@dish)
   end
 
   # GET /dishes/new
@@ -24,7 +25,7 @@ class DishesController < ApplicationController
     @dish = Dish.new(dish_params)
 
     if @dish.save
-      redirect_to @dish, notice: 'Dish was successfully created.'
+      redirect_to root_path(@dish), notice: 'Dish was successfully created.'
     else
       render :new
     end
@@ -33,7 +34,7 @@ class DishesController < ApplicationController
   # PATCH/PUT /dishes/1
   def update
     if @dish.update(dish_params)
-      redirect_to @dish, notice: 'Dish was successfully updated.'
+      redirect_to root_path(@dish), notice: 'Dish was successfully updated.'
     else
       render :edit
     end
@@ -42,7 +43,7 @@ class DishesController < ApplicationController
   # DELETE /dishes/1
   def destroy
     @dish.destroy
-    redirect_to dishes_url, notice: 'Dish was successfully destroyed.'
+    redirect_to root_path(@dish), notice: 'Dish was successfully destroyed.'
   end
 
   private
@@ -53,6 +54,6 @@ class DishesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def dish_params
-      params.require(:dish).permit(:price, :name, :description)
+      params.require(:dish).permit(:price, :name, :description, :course_id)
     end
 end

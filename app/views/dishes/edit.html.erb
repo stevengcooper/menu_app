@@ -2,5 +2,6 @@
 
 <%= render 'form' %>
 
+<%= button_to "Delete", dish_path(:id => @dish.id), :method => :delete %>
 <%= link_to 'Show', @dish %> |
 <%= link_to 'Back', dishes_path %>
