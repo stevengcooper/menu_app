@@ -22,7 +22,9 @@
     <li><a href="#">Dessert</a></li>
   </ul>
 </div> -->
-  
+  <div class="field">
+    <%= f.label :course_id %>
+    <%= f.collection_select :course_id, Course.order(:name),:id,:name, include_blank: true %> 
   <div class="field">
     <%= f.label :price %><br>
     <%= f.text_field :price %>

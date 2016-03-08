@@ -8,3 +8,7 @@
 Course.create(name: 'Appetizers')
 Course.create(name: 'Entrees')
 Course.create(name: 'Dessert')
+
+20.times do |n|
+  Dish.create(name: Faker::Hipster.words, price: rand(9.99..29.99), course_id: rand(1..3), description: Faker::Hipster.sentences)
+end

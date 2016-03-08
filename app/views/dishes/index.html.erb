@@ -121,28 +121,36 @@ Bisquits & Brews began as a dream one afternoon.  A student dreamed of actually 
                  <i class="menu"</i>
                             <h3>
 
-                              <%= link_to "Appetizer", new_dish_path(course_id: 1)%></h3>
+                              <%= link_to "Appetizer", new_dish_path%></h3>
                             <p>
                               <%= image_tag asset_url("appetizer.jpg"), id: "courses" %>
                             </p>
+                            <div class="col-md-4  col-sm-4">
+                              <%= Dish.where(:course_id == 1).each {|dish| p "#{dish.name} costs: #{dish.price} you can expect: #{dish.description}"} %>
+
+                            </div>
 
                           </div>
                        <div class="col-md-4  col-sm-4">
                            <i class="menu"></i>
                            <h3>
 
-                              <%= link_to "Entree", new_dish_path(course_id: 2)%></h3>
+                              <%= link_to "Entree", new_dish_path%></h3>
                             <p>
                               <%= image_tag asset_url("entree.jpg"), id: "courses" %>
                             </p>
-                          
+                            <div class="col-md-4  col-sm-4">
+                              <%= Dish.where(:course_id == 2).each {|dish| p "#{dish.name} costs: #{dish.price} you can expect: #{dish.description}"} %>
+
+                            </div>
+
 
                 </div>
             <div class="col-md-4  col-sm-4">
                   <i class="menu"></i>
                             <h3>
 
-                              <%= link_to "Dessert", new_dish_path(course_id: 3)%></h3>
+                              <%= link_to "Dessert", new_dish_path%></h3>
                             <p>
                                 <%= image_tag asset_url("dessert.jpg"), id: "courses" %>
                             </p>
@@ -151,6 +159,13 @@ Bisquits & Brews began as a dream one afternoon.  A student dreamed of actually 
             </div>
             </div>
             <div class="col-md-4  col-sm-4">
+              <%= Dish.where(:course_id == 3).each {|dish| p "#{dish.name} costs: #{dish.price} you can expect: #{dish.description}"} %>
+
+            </div>
+
+
+
+
 
 
             </div>
