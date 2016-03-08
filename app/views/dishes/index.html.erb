@@ -125,6 +125,10 @@ Bisquits & Brews began as a dream one afternoon.  A student dreamed of actually 
                             <p>
                               <%= image_tag asset_url("appetizer.jpg"), id: "courses" %>
                             </p>
+                            <div class="col-md-4  col-sm-4">
+                              <%= Dish.where(:course_id == 1).each {|dish|  "#{dish.name} costs: #{dish.price} you can expect: #{dish.description}"} %>
+
+                            </div>
 
                           </div>
                        <div class="col-md-4  col-sm-4">
@@ -135,7 +139,10 @@ Bisquits & Brews began as a dream one afternoon.  A student dreamed of actually 
                             <p>
                               <%= image_tag asset_url("entree.jpg"), id: "courses" %>
                             </p>
+                            <div class="col-md-4  col-sm-4">
+                              <%= Dish.where(:course_id == 2).each {|dish|  "#{dish.name} costs: #{dish.price} you can expect: #{dish.description}"} %>
 
+                            </div>
 
 
                 </div>
@@ -151,7 +158,10 @@ Bisquits & Brews began as a dream one afternoon.  A student dreamed of actually 
                 </div>
             </div>
             </div>
-            
+            <div class="col-md-4  col-sm-4">
+              <%= Dish.where(:course_id == 3).each {|dish|  "#{dish.name} costs: #{dish.price} you can expect: #{dish.description}"} %>
+
+            </div>
 
 
 
