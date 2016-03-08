@@ -119,23 +119,30 @@ Bisquits & Brews began as a dream one afternoon.  A student dreamed of actually 
             <div class="row text-center">
             <div class="col-md-4  col-sm-4">
                  <i class="menu"</i>
-                            <h3> <li><a href="http://localhost:3000/dishes/new?course_id&1">Appetizers</a></li></h3>
+                            <h3>
+
+                              <%= link_to "Appetizer", new_dish_path(course_id: 1)%></h3>
                             <p>
-                                <%= image_tag asset_url("appetizer.jpg"), id: "courses" %>
+                              <%= image_tag asset_url("appetizer.jpg"), id: "courses" %>
                             </p>
 
-                </div>
-             <div class="col-md-4  col-sm-4">
-                 <i class="menu"></i>
-                            <h3> <li><a href="http://localhost:3000/dishes/new?course_id&2">Entrees</a></li></h3>
+                          </div>
+                       <div class="col-md-4  col-sm-4">
+                           <i class="menu"></i>
+                           <h3>
+
+                              <%= link_to "Entree", new_dish_path(course_id: 2)%></h3>
                             <p>
-                            <%= image_tag asset_url("entree.jpg"), id: "courses" %>
+                              <%= image_tag asset_url("entree.jpg"), id: "courses" %>
                             </p>
+                          
 
                 </div>
             <div class="col-md-4  col-sm-4">
                   <i class="menu"></i>
-                            <h3> <li><a href="http://localhost:3000/dishes/new?course_id&3">Dessert</a></li></h3>
+                            <h3>
+
+                              <%= link_to "Dessert", new_dish_path(course_id: 3)%></h3>
                             <p>
                                 <%= image_tag asset_url("dessert.jpg"), id: "courses" %>
                             </p>
@@ -144,7 +151,7 @@ Bisquits & Brews began as a dream one afternoon.  A student dreamed of actually 
             </div>
             </div>
             <div class="col-md-4  col-sm-4">
-              
+
 
             </div>
         </div>
