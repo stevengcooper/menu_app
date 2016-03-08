@@ -1,31 +1,168 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Dishes</h1>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title> Free Template- Simple Company</title>
+    <!--REQUIRED STYLE SHEETS-->
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLE CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!--ANIMATED FONTAWESOME STYLE CSS -->
+    <link href="assets/css/font-awesome-animation.css" rel="stylesheet" />
+       <!-- CUSTOM STYLE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body >
+       <!-- NAV SECTION -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Biscuits & Brews</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://www.seriouseats.com/recipes/2011/11/the-worlds-best-biscuits-recipe.html">Inspiration</a></li>
+                     <li><a href="http://www.grubstreet.com/2015/10/expensive-cracker-from-titanic.html">News</a></li>
 
-<table>
-  <thead>
-    <tr>
-      <th>Price</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+                </ul>
+            </div>
 
-  <tbody>
-    <% @dishes.each do |dish| %>
-      <tr>
-        <td><%= dish.price %></td>
-        <td><%= dish.name %></td>
-        <td><%= dish.description %></td>
-        <td><%= link_to 'Show', dish %></td>
-        <td><%= link_to 'Edit', edit_dish_path(dish) %></td>
-        <td><%= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        </div>
+    </div>
+     <!--END NAV SECTION -->
 
-<br>
+    <!--HOME SECTION-->
+    <div id="home-sec">
 
-<%= link_to 'New Dish', new_dish_path %>
+
+    <div class="container" id="home" >
+        
+            <div class="col-md-4  col-sm-4">
+                            <h4> Food </h4>
+                            <p>
+                              <%= image_tag asset_url("buttermilk-biscuits.jpg"), id: "top_pic" %>
+                            </p>
+
+
+                </div>
+             <div class="col-md-4  col-sm-4">
+
+                            <h4>  Beer</h4>
+                            <p>
+                              <%= image_tag asset_url("brews.jpg"), id: "top_pic" %>
+
+                            </p>
+                </div>
+            <div class="col-md-4  col-sm-4">
+
+                            <h4> Music </h4>
+                            <p>
+                              <%= image_tag asset_url("jazz.jpg"), id: "top_pic" %>
+                            </p>
+
+                </div>
+            </div>
+
+    </div>
+         </div>
+
+    <!--END HOME SECTION-->
+    <!--SERVICES SECTION-->
+    <section  id="services-sec" >
+        <div class="container">
+
+            <div class="row ">
+                <div class="col-md-12">
+                      <div class="col-md-5 col-sm-5">
+                          <h2>Truth was spoken... </h2>
+                    <p>
+“America is all about biscuits. Hot, nasty, badass biscuits.” <br>
+Elenor Roosevelt, 1936
+                    </p>
+                      <!-- <%= image_tag asset_url("elenor.jpg"), id: "elenor" %> -->
+                    </div>
+
+                    <div class="col-md-7 col-sm-7">
+                    <h2>The Dream began... </h2>
+                    <p>
+Bisquits & Brews began as a dream one afternoon.  A student dreamed of actually finishing a project and having something to show his classmates, and then it struck him. Use a front end template and manipulate it to do what you want. That's when he played a cover tune  someone else's code, because he saw no reason to reinvent the wheel.
+                    </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row text-center">
+            <div class="col-md-4  col-sm-4">
+                 <i class="menu"</i>
+                            <h3>Appetiser </h3>
+                            <p>
+                                <%= image_tag asset_url("appetizer.jpg"), id: "courses" %>
+                            </p>
+
+                </div>
+             <div class="col-md-4  col-sm-4">
+                 <i class="menu"></i>
+                            <h3>Entrees </h3>
+                            <p>
+                            <%= image_tag asset_url("entree.jpg"), id: "courses" %>
+                            </p>
+
+                </div>
+            <div class="col-md-3  col-sm-2">
+                  <i class="menu"></i>
+                            <h3>Desserts </h3>
+                            <p>
+                                <%= image_tag asset_url("dessert.jpg"), id: "courses" %>
+                            </p>
+
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!--END SERVICES SECTION-->
+
+
+    <!--FOOTER SECTION -->
+    <div id="footer">
+        2016 www.biscuitsandbrews.com | All Right Reserved
+
+    </div>
+    <!-- END FOOTER SECTION -->
+
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY  -->
+    <script src="assets/plugins/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP CORE SCRIPT   -->
+    <script src="assets/plugins/bootstrap.js"></script>
+
+    <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+
+</body>
+</html>
