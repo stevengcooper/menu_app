@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row ">
+    <div class="col-md-4  col-sm-4">
+    <% Dish.where(course_id: 1).each do |dish| %>
+      <div><%=label_tag "Name:" %></div>
+      <div><%= dish.name %></div>
+
+
+    <% end %>
+
+        <div class="field">
+      <%= Dish.where(:course_id == 1).each {|dish|  "#{dish.name} costs: #{dish.price} you can expect: #{dish.description}"} %>
+    </div>

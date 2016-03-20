@@ -1,0 +1,3 @@
+<div class="col-md-4  col-sm-4">
+  <%= Dish.where(:course_id == 2).each {|dish|  "#{dish.name} costs: #{dish.price} you can expect: #{dish.description}"} %>
+</div>

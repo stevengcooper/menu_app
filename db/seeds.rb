@@ -9,6 +9,14 @@ Course.create(name: 'Appetizers')
 Course.create(name: 'Entrees')
 Course.create(name: 'Dessert')
 
-20.times do |n|
-  Dish.create(name: Faker::Hipster.words, price: rand(9.99..29.99), course_id: rand(1..3), description: Faker::Hipster.sentences)
+2.times do |n|
+  Dish.create(name: "appetizer", price: Faker::Number.decimal(2), course_id: 1, description: Faker::Hipster.sentence)
+end
+
+2.times do |n|
+  Dish.create(name: "entree", price: Faker::Number.decimal(2), course_id: 2, description: Faker::Hipster.sentence)
+end
+
+2.times do |n|
+  Dish.create(name: "dessert", price: Faker::Number.decimal(2), course_id: 3, description: Faker::Hipster.sentence)
 end

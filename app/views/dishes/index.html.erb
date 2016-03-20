@@ -126,7 +126,6 @@ Bisquits & Brews began as a dream one afternoon.  A student dreamed of actually 
                               <%= image_tag asset_url("appetizer.jpg"), id: "courses" %>
                             </p>
                             <div class="col-md-4  col-sm-4">
-                              <%= Dish.where(:course_id == 1).each {|dish|  "#{dish.name} costs: #{dish.price} you can expect: #{dish.description}"} %>
 
                             </div>
 
@@ -140,7 +139,7 @@ Bisquits & Brews began as a dream one afternoon.  A student dreamed of actually 
                               <%= image_tag asset_url("entree.jpg"), id: "courses" %>
                             </p>
                             <div class="col-md-4  col-sm-4">
-                              <%= Dish.where(:course_id == 2).each {|dish|  "#{dish.name} costs: #{dish.price} you can expect: #{dish.description}"} %>
+
 
                             </div>
 
@@ -158,20 +157,70 @@ Bisquits & Brews began as a dream one afternoon.  A student dreamed of actually 
                 </div>
             </div>
             </div>
-            <div class="col-md-4  col-sm-4">
-              <%= Dish.where(:course_id == 3).each {|dish|  "#{dish.name} costs: #{dish.price} you can expect: #{dish.description}"} %>
-
-            </div>
-
-
-
-
-
 
             </div>
         </div>
     </section>
     <!--END SERVICES SECTION-->
+
+  <div class="row text-center">
+
+    <div class="col-md-4  col-sm-4" </div>
+     <% @dishes.each do |dish|%>
+      <% if dish.course_id == 1 %>
+        <p><%= label_tag "Name:"%>
+          <span><%= dish.name %></span>
+        </p>
+        <p><%= label_tag "Price:"%>
+          <span><%= dish.price %></span>
+        </p>
+        <p><%= label_tag "Description:"%>
+          <span><%= dish.description %></span>
+        </p>
+        <p></p>
+        <p></p>
+      <%end %>
+     <% end %>
+    </div>
+    <div class="col-md-4  col-sm-4" </div>
+      <% @dishes.each do |dish|%>
+       <% if dish.course_id == 2 %>
+             <p><%= label_tag "Name:"%>
+               <span><%= dish.name %></span>
+             </p>
+             <p><%= label_tag "Price:"%>
+               <span><%= dish.price %></span>
+             </p>
+             <p><%= label_tag "Description:"%>
+               <span><%= dish.description %></span>
+             </p>
+             <p></p>
+             <p></p>
+         <%end %>
+      <% end %>
+    </div>
+    <div class="col-md-4  col-sm-4" </div>
+      <% @dishes.each do |dish|%>
+       <% if dish.course_id == 3 %>
+             <p><%= label_tag "Name:"%>
+               <span><%= dish.name %></span>
+             </p>
+             <p><%= label_tag "Price:"%>
+               <span><%= dish.price %></span>
+             </p>
+             <p><%= label_tag "Description:"%>
+               <span><%= dish.description %></span>
+             </p>
+             <p></p>
+             <p></p>
+         <%end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
 
 
     <!--FOOTER SECTION -->
