@@ -1,4 +1,2 @@
 # Menu App
-It is a flashy website that calculates nothing.
-
-The workflow moves as the user required.
+It is a page for a cafe/restaurant.  It allows the user to update three courses for the restaurant.
