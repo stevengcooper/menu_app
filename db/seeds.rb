@@ -8,15 +8,3 @@
 Course.create(name: 'Appetizers')
 Course.create(name: 'Entrees')
 Course.create(name: 'Dessert')
-
-2.times do |n|
-  Dish.create(name: "appetizer", price: Faker::Number.decimal(2), course_id: 1, description: Faker::Hipster.sentence)
-end
-
-2.times do |n|
-  Dish.create(name: "entree", price: Faker::Number.decimal(2), course_id: 2, description: Faker::Hipster.sentence)
-end
-
-2.times do |n|
-  Dish.create(name: "dessert", price: Faker::Number.decimal(2), course_id: 3, description: Faker::Hipster.sentence)
-end
