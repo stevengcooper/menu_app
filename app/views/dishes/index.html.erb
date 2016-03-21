@@ -34,26 +34,24 @@
 </head>
 <body >
        <!-- NAV SECTION -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Biscuits & Brews</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://www.seriouseats.com/recipes/2011/11/the-worlds-best-biscuits-recipe.html">Inspiration</a></li>
-                     <li><a href="http://www.grubstreet.com/2015/10/expensive-cracker-from-titanic.html">News</a></li>
-
-                </ul>
-            </div>
-
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Biscuits & Brews</a>
         </div>
-    </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://www.seriouseats.com/recipes/2011/11/the-worlds-best-biscuits-recipe.html">Inspiration</a></li>
+             <li><a href="http://www.grubstreet.com/2015/10/expensive-cracker-from-titanic.html">News</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
      <!--END NAV SECTION -->
 
     <!--HOME SECTION-->
@@ -61,106 +59,78 @@
 
 
     <div class="container" id="home" >
+      <div class="col-md-4  col-sm-4">
+        <h4> Food </h4>
+        <p>
+          <%= image_tag asset_url("buttermilk-biscuits.jpg"), id: "top_pic" %>
+        </p>
+      </div>
+      <div class="col-md-4  col-sm-4">
+        <h4>  Beer</h4>
+        <p>
+          <%= image_tag asset_url("brews.jpg"), id: "top_pic" %>
+        </p>
+      </div>
+      <div class="col-md-4  col-sm-4">
+        <h4> Music </h4>
+        <p>
+          <%= image_tag asset_url("jazz.jpg"), id: "top_pic" %>
+        </p>
 
-            <div class="col-md-4  col-sm-4">
-                            <h4> Food </h4>
-                            <p>
-                              <%= image_tag asset_url("buttermilk-biscuits.jpg"), id: "top_pic" %>
-                            </p>
-
-
-                </div>
-             <div class="col-md-4  col-sm-4">
-
-                            <h4>  Beer</h4>
-                            <p>
-                              <%= image_tag asset_url("brews.jpg"), id: "top_pic" %>
-
-                            </p>
-                </div>
-            <div class="col-md-4  col-sm-4">
-
-                            <h4> Music </h4>
-                            <p>
-                              <%= image_tag asset_url("jazz.jpg"), id: "top_pic" %>
-                            </p>
-
-                </div>
-            </div>
-
+      </div>
     </div>
-         </div>
+  </div>
+  </div>
 
     <!--END HOME SECTION-->
     <!--SERVICES SECTION-->
-    <section  id="services-sec" >
-        <div class="container">
-
-            <div class="row ">
-                <div class="col-md-12">
-                      <div class="col-md-5 col-sm-5">
-                          <h2>Truth was spoken... </h2>
-                    <p>
-“America is all about biscuits. Hot, nasty, badass biscuits.” <br>
-Elenor Roosevelt, 1936
-                    </p>
-                      <!-- <%= image_tag asset_url("elenor.jpg"), id: "elenor" %> -->
-                    </div>
-
-                    <div class="col-md-7 col-sm-7">
-                    <h2>The Dream began... </h2>
-                    <p>
-Bisquits & Brews began as a dream one afternoon. A craving was discovered. There was a need for a Biscuit. At the same time there was a yearning for a Brew. He ate a Biscuit and chased it with a Brew. He was happy.  He decided to share his happiness with the world, and the result is Biscuits & Brews.
-                    </p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="row text-center">
-            <div class="col-md-4  col-sm-4">
-                 <i class="menu"</i>
-                            <h3>
-
-                              <%= link_to "Appetizer", new_dish_path%></h3>
-                            <p>
-                              <%= image_tag asset_url("appetizer.jpg"), id: "courses" %>
-                            </p>
-                            <div class="col-md-4  col-sm-4">
-
-                            </div>
-
-                          </div>
-                       <div class="col-md-4  col-sm-4">
-                           <i class="menu"></i>
-                           <h3>
-
-                              <%= link_to "Entree", new_dish_path%></h3>
-                            <p>
-                              <%= image_tag asset_url("entree.jpg"), id: "courses" %>
-                            </p>
-                            <div class="col-md-4  col-sm-4">
-
-
-                            </div>
-
-
-                </div>
-            <div class="col-md-4  col-sm-4">
-                  <i class="menu"></i>
-                            <h3>
-
-                              <%= link_to "Dessert", new_dish_path%></h3>
-                            <p>
-                                <%= image_tag asset_url("dessert.jpg"), id: "courses" %>
-                            </p>
-
-                </div>
-            </div>
-            </div>
-
-            </div>
+  <section  id="services-sec" >
+    <div class="container">
+      <div class="row ">
+        <div class="col-md-12">
+          <div class="col-md-5 col-sm-5">
+            <h2>Truth was spoken... </h2>
+              <p>“America is all about biscuits. Hot, nasty, badass biscuits.” <br>Elenor Roosevelt, 1936</p>
+              <!-- <%= image_tag asset_url("elenor.jpg"), id: "elenor" %> -->
+          </div>
+          <div class="col-md-7 col-sm-7">
+            <h2>The Dream began... </h2>
+            <p>Bisquits & Brews began as a dream one afternoon. A craving was discovered. There was a need for a Biscuit. At the same time there was a yearning for a Brew. He ate a Biscuit and chased it with a Brew. He was happy.  He decided to share his happiness with the world, and the result is Biscuits & Brews.</p>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4  col-sm-4">
+          <i class="menu"</i>
+            <h3><%= link_to "Appetizer", new_dish_path%></h3>
+            <p>
+              <%= image_tag asset_url("appetizer.jpg"), id: "courses" %>
+            </p>
+            <div class="col-md-4  col-sm-4">
+            </div>
+
+          </div>
+          <div class="col-md-4  col-sm-4">
+            <i class="menu"></i>
+            <h3> <%= link_to "Entree", new_dish_path%></h3>
+            <p><%= image_tag asset_url("entree.jpg"), id: "courses" %></p>
+            <div class="col-md-4  col-sm-4">
+            </div>
+          </div>
+          <div class="col-md-4  col-sm-4">
+            <i class="menu"></i>
+            <h3><%= link_to "Dessert", new_dish_path%></h3>
+            <p>
+                <%= image_tag asset_url("dessert.jpg"), id: "courses" %>
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
     <!--END SERVICES SECTION-->
   <section  id="services-sec" >
   <div class="row text-center">
